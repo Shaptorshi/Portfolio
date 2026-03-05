@@ -1,8 +1,10 @@
 import {FiMail,FiGithub,FiLinkedin} from 'react-icons/fi'
+import {motion} from 'framer-motion'
 
 const contacts = () => {
   return (
-    <section className='py-28 max-w-4xl mx-auto px-6 text-center'>
+    <motion.section initial={{opacity:0,y:30}} whileInView={{opacity:1,y:0}}
+    transition={{duration:0.7}} id="contacts"className='py-28 max-w-4xl mx-auto px-6 text-center'>
       <h2 className='samurai-font mb-4 text-4xl font-bold text-gray-900'>
         Contact
       </h2>
@@ -24,7 +26,7 @@ const contacts = () => {
       <p className='cascadia mt-6 text-gray-500'>
         Let's build something great together 🚀
       </p>
-    </section>
+    </motion.section>
   )
 }
 

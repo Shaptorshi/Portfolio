@@ -7,7 +7,7 @@ import Hero from './components/hero'
 
 const Home = () => {
   return (
-    <div className='max-w-350 px-6 py-20 mx-auto space-y-32'>
+    <div id='home' className='max-w-350 px-6 py-20 mx-auto space-y-32'>
      <Navbar />
      <Hero />
      <Projects/>
