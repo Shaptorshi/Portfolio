@@ -26,7 +26,7 @@ const navbar = () => {
             </div>
             <AnimatePresence>
                 {open &&
-                    <motion.div initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className='absolute right-6 top-16 w-56 bg-amber-10000 backdrop-blur-xl border border-white rounded-xl p-4'>
+                    <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className='absolute right-6 top-16 w-56 bg-amber-10000 backdrop-blur-xl border border-white rounded-xl p-4'>
 
                         <ul className='samurai-font flex flex-col gap-4 mt-4 md:hidden'>
                             <li className='hover:text-orange-400 transition duration-300 cursor-pointer'><a href="#home">Home</a></li>
