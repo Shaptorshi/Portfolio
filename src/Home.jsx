@@ -4,6 +4,9 @@ import Contacts from './components/contacts'
 import Footer from './components/footer'
 import Projects from './components/projects'
 import Hero from './components/hero'
+import Experience from './components/exp'
+import Skills from './components/skills'
+import Education from './components/education'
 
 const Home = () => {
   return (
@@ -12,6 +15,9 @@ const Home = () => {
         <Navbar />
         <Hero />
         <Projects />
+        <Experience />
+        <Skills />
+        <Education />
         <About />
         <Contacts />
         <Footer />
