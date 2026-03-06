@@ -12,6 +12,9 @@ const navbar = () => {
                 <ul className='hidden md:flex gap-8 text-gray-900 '>
                     <li className='hover:text-white transition duration-300 cursor-pointer'><a href="#home">Home</a></li>
                     <li className='hover:text-white transition duration-300 cursor-pointer'><a href="#projects">Projects</a></li>
+                    <li className='hover:text-white transition duration-300 cursor-pointer'><a href="#exp">Experience</a></li>
+                    <li className='hover:text-white transition duration-300 cursor-pointer'><a href="#skills">Skills</a></li>
+                    <li className='hover:text-white transition duration-300 cursor-pointer'><a href="#education">Education</a></li>
                     <li className='hover:text-white transition duration-300 cursor-pointer'><a href="#contacts">Contacts</a></li>
                     <li className='hover:text-white transition duration-300 cursor-pointer'><a href="#about">About</a></li>
                 </ul>
