@@ -16,10 +16,10 @@ const hero = () => {
         </p>
         <div className='mt-20 flex items-center justify-center gap-6' >
           <motion.div whileHover={{ scale: 1.05 }} transition={{ duration: 0.5 }}>
-            <a className='bg-gray-800 text-white p-6 rounded-xl cascadia' target="_blank" href="https://drive.google.com/file/d/1SuH6PH-4u_AFhHK2sqh_royR6eWdeki5/view?usp=sharing" download={"SHAPTORSHI_BHATTACHARYA_RESUME.pdf"}>Download Resume</a>
+            <a className='bg-gray-800 block text-white p-6 rounded-xl cascadia' target="_blank" href="https://drive.google.com/file/d/1SuH6PH-4u_AFhHK2sqh_royR6eWdeki5/view?usp=sharing" download={"SHAPTORSHI_BHATTACHARYA_RESUME.pdf"}>Download Resume</a>
           </motion.div>
-          <motion.div whileHover={{ scale: 1.05 }} transition={{ duration: 0.1 }} className='border p-5 rounded-xl hover:bg-gray-800 hover:text-white transition-all duration-600 ease-in-out hover:scale-y-105'>
-            <a href="https://github.com/Shaptorshi" target='_blank' className='cascadia border-amber-400 p-6 rounded-xl'>Check Github</a>
+          <motion.div whileHover={{ scale: 1.05 }} transition={{ duration: 0.1 }} className='border p-6 rounded-xl hover:bg-gray-800 hover:text-white transition-all duration-600 ease-in-out hover:scale-y-105 '>
+            <a href="https://github.com/Shaptorshi" target='_blank' className='cascadia border-amber-400 px-3 block rounded-xl'>View Github</a>
           </motion.div>
         </div>
       </div>
