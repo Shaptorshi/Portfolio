@@ -3,7 +3,7 @@ import {motion} from 'framer-motion'
 const about = () => {
   return (
     <motion.section initial={{opacity:0,y:30}} whileInView={{opacity:1,y:0}} transition={{duration:0.8}} className="py-28" id='about'> 
-      <h2 className="samurai-font text-4xl font-bold text-gray-900 text-center">
+      <h2 className="samurai-font text-4xl font-bold text-gray-900 text-center border-b border-gray-200">
         About Me
       </h2>
       <div className="mt-16 grid md:grid-cols-2 gap-12 items-center">

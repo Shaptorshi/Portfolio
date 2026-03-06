@@ -27,7 +27,7 @@ const projects = () => {
   return (
     <div id='projects'>
       <motion.section className='py-32' initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
-        <h2 className='samurai-font text-4xl font-bold text-gray-900 text-center'>Projects</h2>
+        <h2 className='samurai-font text-4xl font-bold text-gray-900 text-center border-b border-gray-200'>Projects</h2>
 
         <p className='cascadia text-gray-600 text-center mt-4 mx-auto'>A selection of projects where I applied full-stack development principles to build scalable and user-friendly applications</p>
 

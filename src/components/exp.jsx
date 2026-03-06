@@ -20,7 +20,7 @@ const exp = () => {
     <div id='exp' className='mb-60 py-28'>
       <motion.section initial={{opacity:0,y:30}} whileInView={{opacity:1,y:0}} transition={{duration:0.5}}>
 
-        <h2 className='samurai-font text-4xl font-bold text-gray-900 text-center'>Experience</h2>
+        <h2 className='samurai-font text-4xl font-bold text-gray-900 text-center border-b border-gray-200'>Experience</h2>
         <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-16'>
           {experiences.map((e, idx) => {
             return (

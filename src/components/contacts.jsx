@@ -5,7 +5,7 @@ const contacts = () => {
   return (
     <motion.section initial={{opacity:0,y:30}} whileInView={{opacity:1,y:0}}
     transition={{duration:0.7}} id="contacts"className='py-28 max-w-4xl mx-auto px-6 text-center'>
-      <h2 className='samurai-font mb-4 text-4xl font-bold text-gray-900'>
+      <h2 className='samurai-font mb-4 text-4xl font-bold text-gray-900 border-b border-gray-200'>
         Contact
       </h2>
       <p className='cascadia text-gray-600'>I'm always open to discussing new opportunities, collaborations, or interesting projects. Feel free to reach out.</p>

@@ -27,7 +27,7 @@ const skills = () => {
     return (
         <div id='skills' className='mb-60 py-32'>
             <motion.section initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
-                <h2 className='samurai-font text-4xl font-bold text-gray-900 text-center'>Skills</h2>
+                <h2 className='samurai-font text-4xl font-bold text-gray-900 text-center border-b border-gray-200'>Skills</h2>
                 <motion.div className='grid md:grid-cols-2 lg:grid-cols-3 gap-10 mt-16'>
                     {s.map((skill, idx) => {
                         return (
