@@ -15,9 +15,15 @@ const e = [
     location: "Kolkata, West Bengal, India"
   },
   {
-    course: "Commerce",
+    course: "Commerce, Class XII (ISC)",
     college: "Sri Aurobindo Institute of Education",
     duration: "April 2020 - March 2021",
+    location: "Kolkata, West Bengal, India"
+  },
+  {
+    course: "Class X (ICSE)",
+    college: "Sri Aurobindo Institute of Education",
+    duration: "April 2018 - March 2019",
     location: "Kolkata, West Bengal, India"
   }
 ]
