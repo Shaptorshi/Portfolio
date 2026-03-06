@@ -3,7 +3,7 @@ import React from 'react'
 const footer = () => {
   return (
     <footer className='border-t border-gray-200 py-6 mt-20'>
-      <div className='max-w-6xl mx-auto px-6 text-gray-600 text-sm'>
+      <div className='max-w-full mx-auto px-6 text-gray-600 text-sm'>
         <div className='flex justify-between items-center'>
           <p className='cascadia'>
             © {new Date().getFullYear()}

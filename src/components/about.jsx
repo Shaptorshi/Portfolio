@@ -2,7 +2,7 @@ import {motion} from 'framer-motion'
 
 const about = () => {
   return (
-    <motion.section initial={{opacity:0,y:30}} whileInView={{opacity:1,y:0}} transition={{duration:0.8}} className="py-28" id='about'>
+    <motion.section initial={{opacity:0,y:30}} whileInView={{opacity:1,y:0}} transition={{duration:0.8}} className="py-28" id='about'> 
       <h2 className="samurai-font text-4xl font-bold text-gray-900 text-center">
         About Me
       </h2>

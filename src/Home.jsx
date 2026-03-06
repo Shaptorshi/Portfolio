@@ -11,7 +11,7 @@ import Education from './components/education'
 const Home = () => {
   return (
     <div id='home'>
-      <div className='max-w-400 px-6 py-10 mx-auto space-y-32'>
+      <div className='max-w-460 px-6 py-10 mx-auto space-y-32'>
         <Navbar />
         <Hero />
         <Projects />
@@ -20,8 +20,8 @@ const Home = () => {
         <Education />
         <About />
         <Contacts />
-        <Footer />
       </div>
+        <Footer />
     </div>
   )
 }
