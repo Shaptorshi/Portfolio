@@ -7,13 +7,15 @@ import Hero from './components/hero'
 
 const Home = () => {
   return (
-    <div id='home' className='max-w-350 px-6 py-20 mx-auto space-y-32'>
-     <Navbar />
-     <Hero />
-     <Projects/>
-     <About />
-     <Contacts />
-     <Footer />
+    <div id='home'>
+      <div className='max-w-400 px-6 py-10 mx-auto space-y-32'>
+        <Navbar />
+        <Hero />
+        <Projects />
+        <About />
+        <Contacts />
+        <Footer />
+      </div>
     </div>
   )
 }

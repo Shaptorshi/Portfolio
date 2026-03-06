@@ -14,7 +14,7 @@ const about = () => {
             
           </p>
         </div>
-        <motion.div whileHover={{scale:1.03}}className="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition">
+        <motion.div whileHover={{scale:1.03}} transition={{duration:0.4}} className="bg-white p-8 rounded-xl shadow-md hover:shadow-xl">
           <h3 className="samurai-font text-xl font-semibold text-gray-800 mb-4">Technologies I Work With</h3>
           <p className="cascadia text-gray-600">React • Node.js • Express • MongoDB • Redis • JWT • Tailwind</p>
           <h3 className="samurai-font text-xl font-semibold text-gray-800 mt-8 mb-4">What I Enjoy Building</h3>

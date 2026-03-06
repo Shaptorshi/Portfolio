@@ -9,6 +9,12 @@
   font-style: normal;
   font-weight: 400;
 }
+.bg-outline {
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(0, 0, 0, 0.08);
+  opacity: 1;
+  letter-spacing: -0.1rem;
+}
 /* :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
