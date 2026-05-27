@@ -27,6 +27,13 @@ const proj = [
     tech:"React • Node • Express • MongoDB • Redis • JWT",
     website:"https://finsense-lyart.vercel.app/",
     github: "https://github.com/Shaptorshi/Finance-Tracker"
+  },
+  {
+    title: "AI Share Trend Analyzer",
+    description: "An AI-powered stock market analysis platform that provides share trend insights, technical indicator analysis, and AI-generated predictions using historical market data. The application integrates financial data APIs with machine learning and LLM-based analysis to help users understand stock movement patterns, market sentiment, and potential trends through an interactive and modern dashboard.",
+    tech:"Next.js • React • TypeScript • Tailwind CSS • FastAPI • Prisma ORM • PostgreSQL • yFinance API • Ollama (Llama 3.2) • REST API • Vercel",
+    website:"https://tradeedge-zeta.vercel.app/",
+    github: "https://github.com/Shaptorshi/AI-Share-Trend-Analyser"
   }
 ]
 
