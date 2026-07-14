@@ -34,6 +34,13 @@ const proj = [
     tech:"Next.js • React • TypeScript • Tailwind CSS • FastAPI • Prisma ORM • PostgreSQL • yFinance API • Ollama (Llama 3.2) • REST API • Vercel",
     website:"https://tradeedge-zeta.vercel.app/",
     github: "https://github.com/Shaptorshi/AI-Share-Trend-Analyser"
+  },
+  {
+    title: "Parking Management System",
+    description: "A web-based parking management system that allows users to find available parking spots, reserve slots, and manage their parking sessions. The application features real-time availability updates, payment processing, and analytics for parking facility operators.",
+    tech:"Next.js • Prisma • PostgreSQL • Tailwind CSS • OpenStreetMap Nominatim API • NextAuth",
+    website:"https://parking-management-system-ebon.vercel.app",
+    github: "https://github.com/Shaptorshi/Parking-Management-System"
   }
 ]
 
