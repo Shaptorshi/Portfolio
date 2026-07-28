@@ -1,30 +1,88 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 
-const hero = () => {
+const Hero = () => {
   return (
-    <motion.section className="text-center py-55 px-6 overflow-hidden" initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
-      <div className='cascadia absolute text-[18vw] left-1/2 -translate-x-1/2 bg-outline select-none pointer-events-none z-0 max-w-580'>DEVELOPER</div>
-      <div className='z-10'>
-        <p className='cascadia text-md text-gray-500 tracking-widest uppercase'>Welcome to my portfolio</p>
-        <h1 className='samurai-font mt-4 text-6xl font-bold bg-linear-to-r from-gray-900 to-gray-600 bg-clip-text'>Hi, I'm Shaptorshi</h1>
+    <motion.section
+      className="text-center py-28 md:py-36 px-6"
+      initial={{ opacity: 0, y: 40 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8, ease: 'easeOut' }}
+    >
+      <motion.p
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.3, duration: 0.6 }}
+        className='text-sm text-stone-400 tracking-[0.2em] uppercase font-medium'
+      >
+        Welcome to my portfolio
+      </motion.p>
 
-        <h2 className='samurai-font mt-4 text-6xl font-semibold text-gray-900'>Full Stack Developer </h2><p className='cascadia mt-4 text-lg font-semibold text-gray-600'>building modern web applications.</p>
-        <p className='cascadia mt-4 text-lg text-gray-600'>I enjoy building fast, scalable, and user-focused web applications.</p>
-        <p className='cascadia mt-4 text-lg text-gray-500'>
-          React • Node.js • Express • MongoDB
-        </p>
-        <div className='mt-20 flex items-center justify-center gap-6' >
-          <motion.div whileHover={{ scale: 1.05 }} transition={{ duration: 0.5 }}>
-            <a className='bg-gray-800 block text-white p-6 rounded-xl cascadia' target="_blank" href="https://drive.google.com/file/d/1SuH6PH-4u_AFhHK2sqh_royR6eWdeki5/view?usp=sharing" download={"SHAPTORSHI_BHATTACHARYA_RESUME.pdf"}>Download Resume</a>
-          </motion.div>
-          <motion.div whileHover={{ scale: 1.05 }} transition={{ duration: 0.1 }} className='border p-6 rounded-xl hover:bg-gray-800 hover:text-white transition-all duration-600 ease-in-out hover:scale-y-105 '>
-            <a href="https://github.com/Shaptorshi" target='_blank' className='cascadia border-amber-400 px-3 block rounded-xl'>View Github</a>
-          </motion.div>
-        </div>
-      </div>
+      <motion.h1
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.4, duration: 0.7 }}
+        className='font-heading mt-6 text-5xl md:text-7xl font-bold text-stone-900 leading-tight'
+      >
+        Hi, I'm Shaptorshi
+      </motion.h1>
+
+      <motion.h2
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.5, duration: 0.7 }}
+        className='font-heading mt-3 text-3xl md:text-5xl font-semibold text-stone-700'
+      >
+        Full Stack Developer
+      </motion.h2>
+
+      <motion.p
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.7, duration: 0.6 }}
+        className='mt-6 text-lg text-stone-500 max-w-xl mx-auto leading-relaxed'
+      >
+        I enjoy building fast, scalable, and user-focused web applications.
+      </motion.p>
+
+      <motion.p
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.8, duration: 0.6 }}
+        className='font-mono mt-4 text-sm text-stone-400'
+      >
+        React · Node.js · Express · MongoDB
+      </motion.p>
+
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.9, duration: 0.6 }}
+        className='mt-12 flex items-center justify-center gap-4 flex-wrap'
+      >
+        <motion.a
+          whileHover={{ scale: 1.03 }}
+          whileTap={{ scale: 0.98 }}
+          transition={{ duration: 0.2 }}
+          href="https://drive.google.com/file/d/1SuH6PH-4u_AFhHK2sqh_royR6eWdeki5/view?usp=sharing"
+          target="_blank"
+          className='bg-accent text-white px-8 py-3.5 rounded-xl font-medium text-sm hover:bg-accent-dark transition-colors duration-300 shadow-sm'
+        >
+          Download Resume
+        </motion.a>
+        <motion.a
+          whileHover={{ scale: 1.03 }}
+          whileTap={{ scale: 0.98 }}
+          transition={{ duration: 0.2 }}
+          href="https://github.com/Shaptorshi"
+          target='_blank'
+          className='border border-stone-300 text-stone-600 px-8 py-3.5 rounded-xl font-medium text-sm hover:border-accent hover:text-accent transition-all duration-300'
+        >
+          View Github
+        </motion.a>
+      </motion.div>
     </motion.section>
   )
 }
 
-export default hero
+export default Hero

@@ -1,10 +1,9 @@
-// import './App.css'
 import Home from './Home'
 function App() {
 
   return (
     <>
-    <div className='min-h-screen bg-linear-to-b from-amber-50 to-white scroll-smooth'>
+    <div className='min-h-screen bg-warm-bg scroll-smooth'>
       <Home />
     </div>
     </>

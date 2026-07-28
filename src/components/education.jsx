@@ -3,15 +3,15 @@ import { MapPin } from 'lucide-react'
 
 const e = [
   {
-    course: "Bachelor of Computer Applications(BCA)",
+    course: "Master of Computer Applications (MCA)",
     college: "Brainware University",
-    duration: "Aug 2021 - July 2024",
+    duration: `Aug 2024 - ${new Date().getFullYear()}`,
     location: "Kolkata, West Bengal, India"
   },
   {
-    course: "Master of Computer Applications(MCA)",
+    course: "Bachelor of Computer Applications (BCA)",
     college: "Brainware University",
-    duration: `Aug 2024 - ${new Date().getFullYear()}`,
+    duration: "Aug 2021 - July 2024",
     location: "Kolkata, West Bengal, India"
   },
   {
@@ -28,29 +28,39 @@ const e = [
   }
 ]
 
-const education = () => {
+const Education = () => {
   return (
-    <div id='education' className='mb-60 py-28'>
-      <motion.section initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
-        <h2 className='samurai-font text-4xl font-bold text-gray-900 text-center border-b border-gray-200'>Education</h2>
-        <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-16'>
-          {e.map((education, idx) => {
-            return (
-              <motion.div whileHover={{ scale: 1.05 }} transition={{ duration: 0.5 }} key={idx} className='bg-white rounded-xl p-6 shadow-md hover:shadow-xl'>
-                <h3 className='samurai-font text-xl font-semibold mb-3 text-gray-800'>{education.course}</h3>
-                <h4 className='cascadia text-sm text-gray-600 mb-3'>{education.college}</h4>
-                <p className='cascadia text-sm text-gray-600'>{education.duration}</p>
-                <div className='flex items-center cascadia text-sm text-gray-600 mt-3 gap-1.5'> 
-                  <MapPin size={16}/>
-                  <p >{education.location}</p>
-                </div>
-              </motion.div>
-            )
-          })}
+    <div id='education' className='py-20'>
+      <motion.section
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: '-80px' }}
+        transition={{ duration: 0.5 }}
+      >
+        <h2 className='font-heading text-4xl font-bold text-stone-900 text-center'>Education</h2>
+        <div className='w-12 h-0.5 bg-accent mx-auto mt-4' />
+
+        <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-5 mt-12'>
+          {e.map((education, idx) => (
+            <motion.div
+              whileHover={{ y: -4 }}
+              transition={{ duration: 0.25 }}
+              key={idx}
+              className='bg-warm-surface border border-stone-200 p-6 rounded-xl hover:border-accent-light hover:shadow-md transition-all duration-300'
+            >
+              <h3 className='font-heading text-lg font-semibold text-stone-900'>{education.course}</h3>
+              <p className='text-sm text-stone-500 mt-2'>{education.college}</p>
+              <p className='font-mono text-xs text-stone-400 mt-3'>{education.duration}</p>
+              <div className='flex items-center text-xs text-stone-400 mt-2 gap-1.5'>
+                <MapPin size={14} />
+                <p>{education.location}</p>
+              </div>
+            </motion.div>
+          ))}
         </div>
       </motion.section>
     </div>
   )
 }
 
-export default education
+export default Education

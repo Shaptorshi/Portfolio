@@ -1,33 +1,48 @@
-import {FiMail,FiGithub,FiLinkedin} from 'react-icons/fi'
-import {motion} from 'framer-motion'
+import { FiMail, FiGithub, FiLinkedin } from 'react-icons/fi'
+import { motion } from 'framer-motion'
 
-const contacts = () => {
+const Contacts = () => {
   return (
-    <motion.section initial={{opacity:0,y:30}} whileInView={{opacity:1,y:0}}
-    transition={{duration:0.7}} id="contacts"className='py-28 max-w-4xl mx-auto px-6 text-center'>
-      <h2 className='samurai-font mb-4 text-4xl font-bold text-gray-900 border-b border-gray-200'>
-        Contact
-      </h2>
-      <p className='cascadia text-gray-600'>I'm always open to discussing new opportunities, collaborations, or interesting projects. Feel free to reach out.</p>
+    <motion.section
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: '-80px' }}
+      transition={{ duration: 0.7 }}
+      id="contacts"
+      className='py-20 max-w-4xl mx-auto px-6 text-center'
+    >
+      <h2 className='font-heading text-4xl font-bold text-stone-900'>Contact</h2>
+      <div className='w-12 h-0.5 bg-accent mx-auto mt-4' />
 
-      <div className='flex justify-center gap-8 mt-10'>
-        <p>
-          <a href="mailto:shaptorshib@gmail.com" target='_blank' className='text-amber-600 font-medium hover:underline'><FiMail size={30}/></a>
-        </p>
-        <p>
-          <a href="https://www.linkedin.com/in/shaptorshi" target='_blank' className='text-amber-600 font-medium hover:underline'><FiLinkedin size={30}/></a>
-        </p>
-        <p>
-          <a href="https://github.com/Shaptorshi" target='_blank' className='text-amber-600 font-medium hover:underline'>
-            <FiGithub size={30}/>
-          </a>
-        </p>
+      <p className='text-stone-500 mt-6 leading-relaxed'>
+        I'm always open to discussing new opportunities, collaborations, or interesting projects. Feel free to reach out.
+      </p>
+
+      <div className='flex justify-center gap-6 mt-10'>
+        {[
+          { href: "mailto:shaptorshib@gmail.com", icon: <FiMail size={24} />, label: "Email" },
+          { href: "https://www.linkedin.com/in/shaptorshi", icon: <FiLinkedin size={24} />, label: "LinkedIn" },
+          { href: "https://github.com/Shaptorshi", icon: <FiGithub size={24} />, label: "GitHub" }
+        ].map((link) => (
+          <motion.a
+            key={link.label}
+            href={link.href}
+            target='_blank'
+            whileHover={{ y: -3 }}
+            transition={{ duration: 0.2 }}
+            className='text-stone-400 hover:text-accent transition-colors duration-300 p-3 rounded-xl hover:bg-accent-bg'
+            aria-label={link.label}
+          >
+            {link.icon}
+          </motion.a>
+        ))}
       </div>
-      <p className='cascadia mt-6 text-gray-500'>
+
+      <p className='mt-8 text-stone-400 text-sm'>
         Let's build something great together 🚀
       </p>
     </motion.section>
   )
 }
 
-export default contacts
+export default Contacts

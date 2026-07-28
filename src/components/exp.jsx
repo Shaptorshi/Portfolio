@@ -15,26 +15,38 @@ const experiences = [
   }
 ]
 
-const exp = () => {
+const Experience = () => {
   return (
-    <div id='exp' className='mb-60 py-28'>
-      <motion.section initial={{opacity:0,y:30}} whileInView={{opacity:1,y:0}} transition={{duration:0.5}}>
+    <div id='exp' className='py-20'>
+      <motion.section
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: '-80px' }}
+        transition={{ duration: 0.5 }}
+      >
+        <h2 className='font-heading text-4xl font-bold text-stone-900 text-center'>Experience</h2>
+        <div className='w-12 h-0.5 bg-accent mx-auto mt-4' />
 
-        <h2 className='samurai-font text-4xl font-bold text-gray-900 text-center border-b border-gray-200'>Experience</h2>
-        <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-16'>
-          {experiences.map((e, idx) => {
-            return (
-              <motion.div key={idx} whileHover={{ scale: 1.05 }} transition={{ duration: 0.5 }} className='bg-white p-6 shadow-md hover:shadow-xl rounded-xl'>
-                <h3 className='samurai-font text-xl font-semibold text-gray-800'>{e.title} | {e.comp_name}</h3>
-                <p className='cascadia text-sm mt-3 text-gray-600'>{e.duration}</p>
-                <p className='cascadia text-sm mt-3 text-gray-600'>{e.mode}</p>
-              </motion.div>
-            )
-          })}
+        <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-5 mt-12'>
+          {experiences.map((e, idx) => (
+            <motion.div
+              key={idx}
+              whileHover={{ y: -4 }}
+              transition={{ duration: 0.25 }}
+              className='bg-warm-surface border border-stone-200 p-6 rounded-xl hover:border-accent-light hover:shadow-md transition-all duration-300'
+            >
+              <h3 className='font-heading text-lg font-semibold text-stone-900'>{e.title}</h3>
+              <p className='font-medium text-stone-500 mt-1.5 text-sm'>{e.comp_name}</p>
+              <div className='font-mono text-xs text-stone-400 mt-4 space-y-1'>
+                <p>{e.duration}</p>
+                <p>{e.mode}</p>
+              </div>
+            </motion.div>
+          ))}
         </div>
       </motion.section>
     </div>
   )
 }
 
-export default exp
+export default Experience

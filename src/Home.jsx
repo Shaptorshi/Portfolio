@@ -11,7 +11,7 @@ import Education from './components/education'
 const Home = () => {
   return (
     <div id='home'>
-      <div className='max-w-460 px-6 py-10 mx-auto space-y-32'>
+      <div className='max-w-6xl px-6 py-10 mx-auto'>
         <Navbar />
         <Hero />
         <Projects />

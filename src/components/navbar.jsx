@@ -2,46 +2,66 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { X, Menu } from 'lucide-react'
 import { useState } from 'react'
 
-const navbar = () => {
-    const [open, setOpen] = useState(false);
+const Navbar = () => {
+  const [open, setOpen] = useState(false);
 
-    return (
-        <motion.nav initial={{ y: -100 }} animate={{ y: 0 }} transition={{ duration: 1.2 }} className='samurai-font text-2xl bg-amber-500 shadow-md sticky top-0 z-50 rounded-2xl p-2'>
-            <div className='max-w-full mx-auto flex justify-between items-center py-4 px-6 text-gray-900 font-semibold'>
-                <h1>Portfolio</h1>
-                <ul className='hidden lg:flex gap-6 lg:gap-8 text-gray-900 items-center text-xl'>
-                    <li className='hover:text-white transition duration-300 cursor-pointer'><a href="#home">Home</a></li>
-                    <li className='hover:text-white transition duration-300 cursor-pointer'><a href="#projects">Projects</a></li>
-                    <li className='hover:text-white transition duration-300 cursor-pointer'><a href="#exp">Experience</a></li>
-                    <li className='hover:text-white transition duration-300 cursor-pointer'><a href="#skills">Skills</a></li>
-                    <li className='hover:text-white transition duration-300 cursor-pointer'><a href="#education">Education</a></li>
-                    <li className='hover:text-white transition duration-300 cursor-pointer'><a href="#contacts">Contacts</a></li>
-                    <li className='hover:text-white transition duration-300 cursor-pointer'><a href="#about">About</a></li>
-                </ul>
-                <button className='lg:hidden' onClick={() => setOpen(!open)}>
-                    {open ? <X /> : <Menu />}
-                </button>
+  return (
+    <motion.nav
+      initial={{ y: -100 }}
+      animate={{ y: 0 }}
+      transition={{ duration: 0.8, ease: 'easeOut' }}
+      className='bg-warm-bg/80 backdrop-blur-xl border border-stone-200 sticky top-4 z-50 rounded-2xl shadow-sm'
+    >
+      <div className='max-w-full mx-auto flex justify-between items-center py-3.5 px-6'>
+        <a href="#home" className='font-heading text-xl font-semibold text-stone-800 hover:text-accent transition-colors duration-300'>
+          Shaptorshi
+        </a>
 
+        <ul className='hidden lg:flex gap-8 items-center text-[15px] font-medium'>
+          {['Home', 'Projects', 'Experience', 'Skills', 'Education', 'Contact', 'About'].map((item) => (
+            <li key={item}>
+              <a
+                href={`#${item === 'Contact' ? 'contacts' : item === 'Experience' ? 'exp' : item.toLowerCase()}`}
+                className='text-stone-500 hover:text-accent transition-colors duration-300'
+              >
+                {item}
+              </a>
+            </li>
+          ))}
+        </ul>
 
-            </div>
-            <AnimatePresence>
-                {open &&
-                    <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className='absolute right-6 top-16 w-56 bg-amber-10000 backdrop-blur-xl border border-white rounded-xl p-4'>
+        <button className='lg:hidden text-stone-600 hover:text-stone-900 transition-colors' onClick={() => setOpen(!open)}>
+          {open ? <X size={22} /> : <Menu size={22} />}
+        </button>
+      </div>
 
-                        <ul className='samurai-font flex flex-col gap-4 mt-4 md:hidden'>
-                            <li className='hover:text-orange-400 transition duration-300 cursor-pointer'><a href="#home">Home</a></li>
-                            <li className='hover:text-orange-400 transition duration-300 cursor-pointer'><a href="#projects">Projects</a></li>
-                            <li className='hover:text-orange-400 transition duration-300 cursor-pointer'><a href="#exp">Experience</a></li>
-                            <li className='hover:text-orange-400 transition duration-300 cursor-pointer'><a href="#skills">Skills</a></li>
-                            <li className='hover:text-orange-400 transition duration-300 cursor-pointer'><a href="#education">Education</a></li>
-                            <li className='hover:text-orange-400 transition duration-300 cursor-pointer'><a href="#contacts">Contacts</a></li>
-                            <li className='hover:text-orange-400 transition duration-300 cursor-pointer'><a href="#about">About</a></li>
-                        </ul>
-                    </motion.div>
-                }
-            </AnimatePresence>
-        </motion.nav>
-    )
+      <AnimatePresence>
+        {open && (
+          <motion.div
+            initial={{ opacity: 0, y: -8 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -8 }}
+            transition={{ duration: 0.2 }}
+            className='absolute right-4 top-16 w-52 bg-warm-surface border border-stone-200 rounded-xl p-4 shadow-lg'
+          >
+            <ul className='flex flex-col gap-3 text-[15px] font-medium'>
+              {['Home', 'Projects', 'Experience', 'Skills', 'Education', 'Contact', 'About'].map((item) => (
+                <li key={item}>
+                  <a
+                    href={`#${item === 'Contact' ? 'contacts' : item === 'Experience' ? 'exp' : item.toLowerCase()}`}
+                    onClick={() => setOpen(false)}
+                    className='text-stone-500 hover:text-accent transition-colors duration-300 block py-1'
+                  >
+                    {item}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </motion.nav>
+  )
 }
 
-export default navbar
+export default Navbar
